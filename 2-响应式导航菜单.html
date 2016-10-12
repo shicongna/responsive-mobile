@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		#nav li{
+			list-style: none;
+			float: left;
+			width:100px;
+			height:30px;
+			line-height: 30px;
+			text-align: center;
+			border:1px solid red;
+		}
+		#shownav{
+			display: none;
+		}
+
+		@media screen and (max-width: 640px){
+			#nav{
+				display: none;
+			}
+			#nav li{
+				float: none;
+				width: 100%;
+
+			}
+			#shownav{
+				display: inline;
+			}
+		}
+	</style>
+</head>
+<body>
+	<button id="shownav">显示菜单</button>
+	<ul id="nav">
+		<li><a href="">主页</a></li>
+		<li><a href="">视频</a></li>
+		<li><a href="">音乐</a></li>
+		<li><a href="">游戏</a></li>
+		<li><a href="">论坛</a></li>
+	</ul>
+	<script src="jquery.js"></script>
+	<script>
+
+		$("#shownav").click(function(){
+			$("#nav").slideToggle(300);
+		})
+
+		$(window).resize(function(){
+			if($(this).width() > 640){
+				$("#nav").css("display","block")
+			}
+		})
+
+	</script>
+</body>
+</html>

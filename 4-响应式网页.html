@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+			box-sizing:border-box;
+		}
+		.clearFix:before,.clearFix:after{
+			content:"";
+			display: block;
+			clear:both;
+		}
+		header{
+			width:980px;
+			height:150px;
+			border:1px solid red;
+			margin:0 auto;
+		}
+		section{
+			width:980px;
+			border:1px solid red;
+			margin:0 auto;
+		}
+		footer{
+			width:980px;
+			height:100px;
+			background-color: #000;
+			margin:0 auto;
+		}
+		article{
+			width:70%;
+			height:650px;
+			float:left;
+			background-color: #ff0;
+		}
+		article .logo img{
+			width:100%;
+		}
+		article .cont img{
+			width:10%;
+			float: left;
+		}
+		aside{
+			width:30%;
+			height:650px;
+			float:left;
+			background-color: #0f0;
+		}
+		aside .list{
+			margin-left:30px;
+		}
+		@media screen and (max-width: 640px){
+			header{
+				width:100%;
+			}
+			section{
+				width:100%;
+			}
+			article{
+				width: 100%;
+				float: none;
+			}
+			aside{
+				width: 100%;
+				float: none;
+			}
+			aside .list{
+				float: right;
+				margin-left: 0;
+			}
+			footer{
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+	</header>
+	<section class="clearFix">
+		<article>
+			<div class="logo">
+				<img src="images/logo2.jpg" alt="">
+			</div>
+			<div class="cont">
+				<img src="images/face01.jpg" alt="">
+				<p>我爱北京天安门我爱北京天安门天安门我爱北京天安门天安门我爱北京天安门天安门我爱北京天安门天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门我爱北京天安门</p>
+			</div>
+		</article>
+		<aside>
+			<ul class="list">
+				<li>我北京天安门</li>
+				<li>我北京天安门</li>
+				<li>我北京天安门</li>
+				<li>我北京天安门</li>
+				<li>我北京天安门</li>
+				<li>我北京天安门</li>
+			</ul>
+		</aside>
+	</section>
+	<footer></footer>
+</body>
+</html>
